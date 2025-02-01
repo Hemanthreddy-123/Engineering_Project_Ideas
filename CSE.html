@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .category {
+            padding: 12px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+        }
+        .projects {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .project {
+            background: #e3e3e3;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .details {
+            display: none;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            margin-top: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Unique Category Colors */
+        .webDev { background: #007BFF; }
+        .mobileDev { background: #28A745; }
+        .pythonProjects { background: #FFC107; }
+        .dataScience { background: #DC3545; }
+        .iot { background: #17A2B8; }
+        .cyberSecurity { background: #6F42C1; }
+        .aiMl { background: #FF5722; }
+        .blockchain { background: #795548; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2> Computer Science and Engineering Projects (CSE)</h2>
+
+    <!-- Web Development -->
+    <div class="category webDev" onclick="toggleProjects('webDev')">Web Development</div>
+    <div id="webDev" class="projects">
+        <div class="project" onclick="toggleDetails('portfolio')">Personal Portfolio Website</div>
+        <div id="portfolio" class="details">
+            <strong>What is it?</strong> A personal website to showcase skills and projects.<br>
+            <strong>Why use it?</strong> Helps in job applications and building an online presence.<br>
+            <strong>How does it work?</strong> Uses HTML, CSS, and JavaScript to create a responsive portfolio. You can showcase your projects, blog posts, and even include links to your social media and GitHub profiles.
+        </div>
+
+        <div class="project" onclick="toggleDetails('todo')">To-Do List App</div>
+        <div id="todo" class="details">
+            <strong>What is it?</strong> A task management app to keep track of daily activities.<br>
+            <strong>Why use it?</strong> Helps in organizing tasks and increasing productivity.<br>
+            <strong>How does it work?</strong> Uses JavaScript for adding, removing, and storing tasks in local storage. The app can also allow task categorization and setting reminders.
+        </div>
+
+        <div class="project" onclick="toggleDetails('calculator')">Basic Calculator</div>
+        <div id="calculator" class="details">
+            <strong>What is it?</strong> A simple calculator for performing basic arithmetic operations.<br>
+            <strong>Why use it?</strong> It provides a good exercise in logic building and interface design.<br>
+            <strong>How does it work?</strong> Developed using JavaScript, implementing logic for basic operations. You can extend this project by adding complex operations like trigonometry, logarithms, or a history panel.
+        </div>
+
+        <div class="project" onclick="toggleDetails('quizApp')">Interactive Quiz App</div>
+        <div id="quizApp" class="details">
+            <strong>What is it?</strong> An app to create and take interactive quizzes.<br>
+            <strong>Why use it?</strong> It helps test knowledge in various subjects and provides fun learning.<br>
+            <strong>How does it work?</strong> Uses JavaScript for dynamic quiz generation, scoring, and results. The app can support multiple question types like multiple choice, true/false, or fill-in-the-blank.
+        </div>
+
+        <div class="project" onclick="toggleDetails('chatApp')">Real-Time Chat Application</div>
+        <div id="chatApp" class="details">
+            <strong>What is it?</strong> A real-time messaging app for chatting with friends.<br>
+            <strong>Why use it?</strong> Enhances your understanding of WebSockets and real-time communication.<br>
+            <strong>How does it work?</strong> Built with Node.js and Socket.io to send messages in real-time. The app can support multiple users and allow for features like notifications and message history.
+        </div>
+    </div>
+
+    <!-- Mobile App Development -->
+    <div class="category mobileDev" onclick="toggleProjects('mobileDev')">Mobile App Development</div>
+    <div id="mobileDev" class="projects">
+        <div class="project" onclick="toggleDetails('unitConverter')">Unit Converter App</div>
+        <div id="unitConverter" class="details">
+            <strong>What is it?</strong> A mobile app to convert units like length, weight, and temperature.<br>
+            <strong>Why use it?</strong> Useful for students, engineers, and travelers.<br>
+            <strong>How does it work?</strong> Developed using Flutter or React Native with real-time unit calculations. The app can also allow custom units or conversions for non-standard measurements.
+        </div>
+
+        <div class="project" onclick="toggleDetails('flashcards')">Simple Flashcard App</div>
+        <div id="flashcards" class="details">
+            <strong>What is it?</strong> A flashcard app for studying concepts with custom flashcards.<br>
+            <strong>Why use it?</strong> Useful for learners to memorize concepts in various subjects.<br>
+            <strong>How does it work?</strong> Built with Flutter or React Native, stores flashcards for easy access. You can add images, audio, and spaced repetition for better memorization.
+        </div>
+
+        <div class="project" onclick="toggleDetails('tipCalculator')">Tip Calculator</div>
+        <div id="tipCalculator" class="details">
+            <strong>What is it?</strong> A simple app for calculating tip amounts when dining out.<br>
+            <strong>Why use it?</strong> It simplifies the task of splitting bills and calculating tips.<br>
+            <strong>How does it work?</strong> Developed using mobile development frameworks, calculates tip based on the total amount. The app could allow for calculating group tips and allowing users to enter the number of people.
+        </div>
+
+        <div class="project" onclick="toggleDetails('expenseTracker')">Expense Tracker App</div>
+        <div id="expenseTracker" class="details">
+            <strong>What is it?</strong> A mobile app to track daily expenses and budget management.<br>
+            <strong>Why use it?</strong> Helps users maintain a record of their financial transactions and track savings.<br>
+            <strong>How does it work?</strong> Built using Flutter/React Native, stores expenses, generates reports, and sends reminders. It could also integrate with external financial APIs for real-time exchange rates or account balances.
+        </div>
+    </div>
+
+    <!-- Python Projects -->
+    <div class="category pythonProjects" onclick="toggleProjects('pythonProjects')">Python Projects</div>
+    <div id="pythonProjects" class="projects">
+        <div class="project" onclick="toggleDetails('guessGame')">Number Guessing Game</div>
+        <div id="guessGame" class="details">
+            <strong>What is it?</strong> A fun game where the user guesses a number chosen randomly by the computer.<br>
+            <strong>Why use it?</strong> Helps in learning loops, conditionals, and random functions in Python.<br>
+            <strong>How does it work?</strong> Uses Python’s random module to generate numbers and conditional statements for validation. You can expand the game to track the number of guesses and provide hints.
+        </div>
+
+        <div class="project" onclick="toggleDetails('rockPaperScissors')">Rock-Paper-Scissors Game</div>
+        <div id="rockPaperScissors" class="details">
+            <strong>What is it?</strong> A simple game to play rock-paper-scissors against the computer.<br>
+            <strong>Why use it?</strong> It teaches decision-making logic and randomness in programming.<br>
+            <strong>How does it work?</strong> Uses Python's random library and conditionals for game mechanics. You can add a scoreboard and extend the game to include more options like Lizard and Spock.
+        </div>
+
+        <div class="project" onclick="toggleDetails('fileOrganizer')">Basic File Organizer</div>
+        <div id="fileOrganizer" class="details">
+            <strong>What is it?</strong> A Python script that organizes files into folders based on type.<br>
+            <strong>Why use it?</strong> It helps in learning file handling and automation.<br>
+            <strong>How does it work?</strong> It organizes files by type (e.g., images, documents) using Python’s OS module. You can enhance the script by adding an auto-scheduler for automatic file organization.
+        </div>
+
+        <div class="project" onclick="toggleDetails('weatherApp')">Weather App</div>
+        <div id="weatherApp" class="details">
+            <strong>What is it?</strong> A Python app that fetches real-time weather data from an API.<br>
+            <strong>Why use it?</strong> Helps you learn how to interact with APIs and manage JSON data.<br>
+            <strong>How does it work?</strong> Uses Python's `requests` library to fetch weather data from an API like OpenWeather and displays it to the user.
+        </div>
+    </div>
+
+    <!-- AI & Machine Learning -->
+    <div class="category aiMl" onclick="toggleProjects('aiMl')">AI & Machine Learning</div>
+    <div id="aiMl" class="projects">
+        <div class="project" onclick="toggleDetails('imageRecog')">Image Recognition</div>
+        <div id="imageRecog" class="details">
+            <strong>What is it?</strong> A machine learning model that classifies images based on trained data.<br>
+            <strong>Why use it?</strong> Used in face recognition, medical imaging, and autonomous vehicles.<br>
+            <strong>How does it work?</strong> Uses deep learning frameworks like TensorFlow to train models for image classification. You can use pre-trained models or build a custom model based on labeled image datasets.
+        </div>
+
+        <div class="project" onclick="toggleDetails('sentimentAnalysis')">Sentiment Analysis</div>
+        <div id="sentimentAnalysis" class="details">
+            <strong>What is it?</strong> An analysis of text data to determine the sentiment of the content (positive, negative, neutral).<br>
+            <strong>Why use it?</strong> Used in analyzing social media content, reviews, and customer feedback.<br>
+            <strong>How does it work?</strong> It uses Natural Language Processing (NLP) to preprocess text and a machine learning model to predict sentiment. The project can be enhanced by implementing a user feedback mechanism to improve the model.
+        </div>
+
+        <div class="project" onclick="toggleDetails('movieRecSys')">Movie Recommendation System</div>
+        <div id="movieRecSys" class="details">
+            <strong>What is it?</strong> A system that suggests movies based on user preferences and previous ratings.<br>
+            <strong>Why use it?</strong> Popular in streaming platforms for providing personalized recommendations.<br>
+            <strong>How does it work?</strong> Uses collaborative filtering and content-based methods for recommendation. You can enhance the project by adding additional data sources such as IMDB ratings or social media trends.
+        </div>
+    </div>
+
+    <!-- Cyber Security -->
+    <div class="category cyberSecurity" onclick="toggleProjects('cyberSecurity')">Cyber Security</div>
+    <div id="cyberSecurity" class="projects">
+        <div class="project" onclick="toggleDetails('passwordManager')">Secure Password Manager</div>
+        <div id="passwordManager" class="details">
+            <strong>What is it?</strong> A tool to securely generate and store passwords.<br>
+            <strong>Why use it?</strong> Prevents weak passwords and enhances security.<br>
+            <strong>How does it work?</strong> Uses encryption algorithms to store passwords securely. The project can be expanded by integrating features like password strength analysis and multi-factor authentication.
+        </div>
+
+        <div class="project" onclick="toggleDetails('vulnerabilityScanner')">Vulnerability Scanner</div>
+        <div id="vulnerabilityScanner" class="details">
+            <strong>What is it?</strong> A tool that scans websites or systems for potential vulnerabilities.<br>
+            <strong>Why use it?</strong> Helps organizations identify security risks and protect data.<br>
+            <strong>How does it work?</strong> It checks websites for weaknesses in common areas such as outdated software and insecure protocols. You can extend this project by creating an automatic reporting system or even integrating a remediation tool.
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleProjects(id) {
+        var projectList = document.getElementById(id);
+        if (projectList.style.display === "block") {
+            projectList.style.display = "none";
+        } else {
+            projectList.style.display = "block";
+        }
+    }
+
+    function toggleDetails(id) {
+        var details
+ = document.getElementById(id);
+        if (details.style.display === "block") {
+            details.style.display = "none";
+        } else {
+            details.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

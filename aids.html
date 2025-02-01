@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & DS Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .category {
+            padding: 12px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+        }
+        .projects {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .project {
+            background: #e3e3e3;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .details {
+            display: none;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            margin-top: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        .aiMl { background: #FF5722; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Artificial Intelligence and Data Science (AI & DS Projects)</h2>
+
+    <!-- NLP Projects -->
+    <div class="category aiMl" onclick="toggleProjects('nlp')">Natural Language Processing (NLP) (10 Projects)</div>
+    <div id="nlp" class="projects">
+        <div class="project" onclick="toggleDetails('sentimentAnalysis')">Sentiment Analysis of Text</div>
+        <div id="sentimentAnalysis" class="details">
+            <strong>Description:</strong> Analyze text data (reviews, tweets) to determine sentiment (positive, negative, neutral).
+        </div>
+        
+        <div class="project" onclick="toggleDetails('textSummarization')">Text Summarization</div>
+        <div id="textSummarization" class="details">
+            <strong>Description:</strong> Automatically generate summaries of longer texts or articles.
+        </div>
+
+        <div class="project" onclick="toggleDetails('chatbot')">Chatbot Development</div>
+        <div id="chatbot" class="details">
+            <strong>Description:</strong> Build a chatbot that can engage in conversations with users.
+        </div>
+
+        <div class="project" onclick="toggleDetails('speechRecognition')">Speech Recognition</div>
+        <div id="speechRecognition" class="details">
+            <strong>Description:</strong> Convert spoken language into text.
+        </div>
+    </div>
+
+    <!-- Computer Vision Projects -->
+    <div class="category aiMl" onclick="toggleProjects('computerVision')">Computer Vision (10 Projects)</div>
+    <div id="computerVision" class="projects">
+        <div class="project" onclick="toggleDetails('imageClassification')">Image Classification</div>
+        <div id="imageClassification" class="details">
+            <strong>Description:</strong> Classify images into predefined categories (e.g., cats vs. dogs).
+        </div>
+
+        <div class="project" onclick="toggleDetails('objectDetection')">Object Detection</div>
+        <div id="objectDetection" class="details">
+            <strong>Description:</strong> Detect and locate objects within an image or video.
+        </div>
+
+        <div class="project" onclick="toggleDetails('faceRecognition')">Face Recognition</div>
+        <div id="faceRecognition" class="details">
+            <strong>Description:</strong> Identify individuals based on their facial features.
+        </div>
+    </div>
+
+    <!-- Machine Learning (General) Projects -->
+    <div class="category aiMl" onclick="toggleProjects('mlGeneral')">Machine Learning (General) (5 Projects)</div>
+    <div id="mlGeneral" class="projects">
+        <div class="project" onclick="toggleDetails('salesForecasting')">Predictive Analytics (Sales Forecasting)</div>
+        <div id="salesForecasting" class="details">
+            <strong>Description:</strong> Predict future sales based on historical data.
+        </div>
+
+        <div class="project" onclick="toggleDetails('churnPrediction')">Customer Churn Prediction</div>
+        <div id="churnPrediction" class="details">
+            <strong>Description:</strong> Predict which customers are likely to churn or cancel their subscriptions.
+        </div>
+    </div>
+
+    <!-- Reinforcement Learning Projects -->
+    <div class="category aiMl" onclick="toggleProjects('rlProjects')">Reinforcement Learning (5 Projects)</div>
+    <div id="rlProjects" class="projects">
+        <div class="project" onclick="toggleDetails('gamePlaying')">Game Playing (Tic-Tac-Toe, Atari Games)</div>
+        <div id="gamePlaying" class="details">
+            <strong>Description:</strong> Train an agent to play a game using reinforcement learning.
+        </div>
+
+        <div class="project" onclick="toggleDetails('trafficControl')">Traffic Control Optimization</div>
+        <div id="trafficControl" class="details">
+            <strong>Description:</strong> Optimize traffic flow using reinforcement learning.
+        </div>
+    </div>
+
+    <!-- Deep Learning Projects -->
+    <div class="category aiMl" onclick="toggleProjects('deepLearning')">Deep Learning (5 Projects)</div>
+    <div id="deepLearning" class="projects">
+        <div class="project" onclick="toggleDetails('cnnRecognition')">CNNs for Image Recognition</div>
+        <div id="cnnRecognition" class="details">
+            <strong>Description:</strong> Build a convolutional neural network (CNN) for image classification.
+        </div>
+
+        <div class="project" onclick="toggleDetails('ganGeneration')">GANs for Image Generation</div>
+        <div id="ganGeneration" class="details">
+            <strong>Description:</strong> Train Generative Adversarial Networks (GANs) to generate realistic images.
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleProjects(id) {
+        var projectList = document.getElementById(id);
+        projectList.style.display = projectList.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleDetails(id) {
+        var details = document.getElementById(id);
+        details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>

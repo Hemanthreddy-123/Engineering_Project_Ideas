@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .category {
+            padding: 12px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+        }
+        .projects {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .project {
+            background: #e3e3e3;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .details {
+            display: none;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            margin-top: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Unique Category Colors */
+        .webDev { background: #007BFF; }
+        .mobileDev { background: #28A745; }
+        .pythonProjects { background: #FFC107; }
+        .dataScience { background: #DC3545; }
+        .iot { background: #17A2B8; }
+        .cyberSecurity { background: #6F42C1; }
+        .aiMl { background: #FF5722; }
+        .blockchain { background: #795548; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Data Science Projects (DS)</h2>
+
+    <!-- Data Science Projects -->
+    <div class="category dataScience" onclick="toggleProjects('dataScience')">Data Science</div>
+    <div id="dataScience" class="projects">
+        <div class="project" onclick="toggleDetails('spamDetection')">Spam Email Detection</div>
+        <div id="spamDetection" class="details">
+            <strong>What is it?</strong> Build a model to classify emails as spam or not spam.<br>
+            <strong>Why use it?</strong> Helps filter unwanted emails, improving user experience.<br>
+            <strong>How does it work?</strong> Use machine learning algorithms like Naive Bayes or SVM to classify emails based on text features like frequency of words.
+        </div>
+
+        <div class="project" onclick="toggleDetails('imageClassification')">Image Classification</div>
+        <div id="imageClassification" class="details">
+            <strong>What is it?</strong> Recognize handwritten digits or classify objects in images.<br>
+            <strong>Why use it?</strong> It is essential in computer vision tasks like OCR (Optical Character Recognition) and object detection.<br>
+            <strong>How does it work?</strong> Use Convolutional Neural Networks (CNNs) to process and classify images based on their features.
+        </div>
+
+        <div class="project" onclick="toggleDetails('customerChurn')">Customer Churn Prediction</div>
+        <div id="customerChurn" class="details">
+            <strong>What is it?</strong> Predict which customers are likely to churn (cancel their service).<br>
+            <strong>Why use it?</strong> Helps businesses retain valuable customers.<br>
+            <strong>How does it work?</strong> Use classification algorithms (e.g., Logistic Regression, Random Forest) to predict churn based on customer data such as usage patterns, customer service interactions, etc.
+        </div>
+
+        <div class="project" onclick="toggleDetails('loanDefault')">Loan Default Prediction</div>
+        <div id="loanDefault" class="details">
+            <strong>What is it?</strong> Predict whether a loan applicant is likely to default.<br>
+            <strong>Why use it?</strong> Helps banks and financial institutions reduce the risk of bad loans.<br>
+            <strong>How does it work?</strong> Build a classifier using financial data, credit scores, and other features.
+        </div>
+
+        <div class="project" onclick="toggleDetails('diseasePrediction')">Disease Prediction</div>
+        <div id="diseasePrediction" class="details">
+            <strong>What is it?</strong> Predict the likelihood of a person having a disease like diabetes or heart disease.<br>
+            <strong>Why use it?</strong> Can be used in healthcare to assist doctors in diagnosing patients.<br>
+            <strong>How does it work?</strong> Use classification algorithms (e.g., Decision Trees, KNN) and patient medical data to predict disease likelihood.
+        </div>
+    </div>
+
+    <!-- AI & Machine Learning Projects -->
+    <div class="category aiMl" onclick="toggleProjects('aiMl')">AI & Machine Learning</div>
+    <div id="aiMl" class="projects">
+        <div class="project" onclick="toggleDetails('sentimentAnalysis')">Sentiment Analysis</div>
+        <div id="sentimentAnalysis" class="details">
+            <strong>What is it?</strong> Classify text as positive, negative, or neutral based on sentiment.<br>
+            <strong>Why use it?</strong> Useful for analyzing reviews, social media content, and customer feedback.<br>
+            <strong>How does it work?</strong> Use NLP techniques (e.g., tokenization, vectorization) and machine learning models like Naive Bayes or LSTM for text classification.
+        </div>
+
+        <div class="project" onclick="toggleDetails('movieRecommendation')">Movie Recommendation System</div>
+        <div id="movieRecommendation" class="details">
+            <strong>What is it?</strong> Recommend movies based on user preferences and past viewing history.<br>
+            <strong>Why use it?</strong> Helps improve user experience on streaming platforms.<br>
+            <strong>How does it work?</strong> Use collaborative filtering or content-based filtering to recommend movies based on user ratings and attributes.
+        </div>
+
+        <div class="project" onclick="toggleDetails('creditCardFraud')">Credit Card Fraud Detection</div>
+        <div id="creditCardFraud" class="details">
+            <strong>What is it?</strong> Detect fraudulent credit card transactions.<br>
+            <strong>Why use it?</strong> Prevents financial loss and protects consumers.<br>
+            <strong>How does it work?</strong> Train machine learning models on transaction data to identify patterns indicative of fraud.
+        </div>
+
+        <div class="project" onclick="toggleDetails('fakeNewsDetection')">Fake News Detection</div>
+        <div id="fakeNewsDetection" class="details">
+            <strong>What is it?</strong> Identify fake news articles based on their content and source.<br>
+            <strong>Why use it?</strong> Helps in ensuring the credibility of online news sources.<br>
+            <strong>How does it work?</strong> Use NLP techniques like text classification to identify fake news based on linguistic features and source credibility.
+        </div>
+
+        <div class="project" onclick="toggleDetails('chatbotDevelopment')">Chatbot Development</div>
+        <div id="chatbotDevelopment" class="details">
+            <strong>What is it?</strong> Build a chatbot that can answer questions or provide assistance.<br>
+            <strong>Why use it?</strong> Enhances user interaction and is used for customer service.<br>
+            <strong>How does it work?</strong> Use NLP for text understanding and generation, and frameworks like Rasa or DialogFlow for building the chatbot’s functionality.
+        </div>
+    </div>
+
+    <script>
+        function toggleProjects(id) {
+            var projectList = document.getElementById(id);
+            if (projectList.style.display === "block") {
+                projectList.style.display = "none";
+            } else {
+                projectList.style.display = "block";
+            }
+        }
+
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+    </script>
+
+</div>
+
+</body>
+</html>

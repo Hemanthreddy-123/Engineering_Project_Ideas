@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & ML Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .category {
+            padding: 12px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+        }
+        .projects {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .project {
+            background: #e3e3e3;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .details {
+            display: none;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            margin-top: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        .nlp { background: #FF5722; }
+        .cv { background: #3F51B5; }
+        .ml { background: #009688; }
+        .rl { background: #795548; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Artificial Intelligence & Machine Learning Projects (AIML)</h2>
+
+    <!-- NLP Projects -->
+    <div class="category nlp" onclick="toggleProjects('nlp')">Natural Language Processing (NLP) - 10 Projects</div>
+    <div id="nlp" class="projects">
+        <div class="project" onclick="toggleDetails('sentiment')">Sentiment Analysis</div>
+        <div id="sentiment" class="details">
+            <strong>What is it?</strong> Analyzes text to determine sentiment (positive, negative, neutral).<br>
+            <strong>Why use it?</strong> Useful for product reviews and customer feedback.<br>
+            <strong>How does it work?</strong> Uses machine learning and NLP techniques.
+        </div>
+
+        <div class="project" onclick="toggleDetails('summarization')">Text Summarization</div>
+        <div id="summarization" class="details">
+            <strong>What is it?</strong> Summarizes long articles into concise texts.<br>
+            <strong>Why use it?</strong> Saves time in reading long documents.<br>
+            <strong>How does it work?</strong> Uses NLP-based extractive and abstractive techniques.
+        </div>
+
+        <div class="project" onclick="toggleDetails('chatbot')">Chatbot Development</div>
+        <div id="chatbot" class="details">
+            <strong>What is it?</strong> A virtual assistant for customer interaction.<br>
+            <strong>Why use it?</strong> Reduces manual customer service work.<br>
+            <strong>How does it work?</strong> Uses NLP models like GPT for automated replies.
+        </div>
+
+        <div class="project" onclick="toggleDetails('translation')">Machine Translation</div>
+        <div id="translation" class="details">
+            <strong>What is it?</strong> Translates text from one language to another.<br>
+            <strong>Why use it?</strong> Helps break language barriers globally.<br>
+            <strong>How does it work?</strong> Uses sequence-to-sequence deep learning models.
+        </div>
+
+        <div class="project" onclick="toggleDetails('spam')">Spam Email Detection</div>
+        <div id="spam" class="details">
+            <strong>What is it?</strong> Filters out spam emails.<br>
+            <strong>Why use it?</strong> Prevents phishing attacks and email clutter.<br>
+            <strong>How does it work?</strong> Uses NLP classification models.
+        </div>
+    </div>
+
+    <!-- Computer Vision Projects -->
+    <div class="category cv" onclick="toggleProjects('cv')">Computer Vision - 10 Projects</div>
+    <div id="cv" class="projects">
+        <div class="project" onclick="toggleDetails('imageClassification')">Image Classification</div>
+        <div id="imageClassification" class="details">
+            <strong>What is it?</strong> Classifies images into categories.<br>
+            <strong>Why use it?</strong> Used in medical diagnosis and security.<br>
+            <strong>How does it work?</strong> Uses deep learning CNNs.
+        </div>
+
+        <div class="project" onclick="toggleDetails('faceRecognition')">Face Recognition</div>
+        <div id="faceRecognition" class="details">
+            <strong>What is it?</strong> Identifies faces in images or videos.<br>
+            <strong>Why use it?</strong> Used in security and authentication.<br>
+            <strong>How does it work?</strong> Uses facial feature extraction with deep learning.
+        </div>
+
+        <div class="project" onclick="toggleDetails('ocr')">Optical Character Recognition (OCR)</div>
+        <div id="ocr" class="details">
+            <strong>What is it?</strong> Extracts text from images.<br>
+            <strong>Why use it?</strong> Converts printed or handwritten text into digital format.<br>
+            <strong>How does it work?</strong> Uses deep learning for character recognition.
+        </div>
+    </div>
+
+    <!-- Machine Learning Projects -->
+    <div class="category ml" onclick="toggleProjects('ml')">Machine Learning - 5 Projects</div>
+    <div id="ml" class="projects">
+        <div class="project" onclick="toggleDetails('salesForecasting')">Sales Forecasting</div>
+        <div id="salesForecasting" class="details">
+            <strong>What is it?</strong> Predicts future sales trends.<br>
+            <strong>Why use it?</strong> Helps in inventory and revenue planning.<br>
+            <strong>How does it work?</strong> Uses regression models.
+        </div>
+    </div>
+
+    <!-- Reinforcement Learning Projects -->
+    <div class="category rl" onclick="toggleProjects('rl')">Reinforcement Learning - 5 Projects</div>
+    <div id="rl" class="projects">
+        <div class="project" onclick="toggleDetails('gameAI')">Game Playing AI</div>
+        <div id="gameAI" class="details">
+            <strong>What is it?</strong> AI that plays strategy games.<br>
+            <strong>Why use it?</strong> Helps in AI research for self-learning models.<br>
+            <strong>How does it work?</strong> Uses deep Q-learning algorithms.
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleProjects(id) {
+        var projectList = document.getElementById(id);
+        projectList.style.display = projectList.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleDetails(id) {
+        var details = document.getElementById(id);
+        details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>

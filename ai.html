@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .category {
+            padding: 12px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+        }
+        .projects {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .project {
+            background: #e3e3e3;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .details {
+            display: none;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            margin-top: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+        .aiMl { background: #FF5722; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Artificial Intelligence Projects (AI)</h2>
+
+    <!-- Artificial Intelligence -->
+    <div class="category aiMl" onclick="toggleProjects('aiMl')">AI & Machine Learning</div>
+    <div id="aiMl" class="projects">
+        
+        <div class="project" onclick="toggleDetails('imageClassification')">Image Classification</div>
+        <div id="imageClassification" class="details">
+            <strong>What is it?</strong> A model that classifies images into categories (e.g., dogs vs. cats).<br>
+            <strong>Why use it?</strong> Used in medical diagnosis, object detection, and security.<br>
+            <strong>How does it work?</strong> Uses deep learning models like CNNs (Convolutional Neural Networks).
+        </div>
+
+        <div class="project" onclick="toggleDetails('objectDetection')">Object Detection</div>
+        <div id="objectDetection" class="details">
+            <strong>What is it?</strong> Identifies and locates objects in images or videos.<br>
+            <strong>Why use it?</strong> Used in autonomous vehicles, security systems, and retail analytics.<br>
+            <strong>How does it work?</strong> Uses YOLO (You Only Look Once) or SSD (Single Shot Detector) models.
+        </div>
+
+        <div class="project" onclick="toggleDetails('sentimentAnalysis')">Sentiment Analysis</div>
+        <div id="sentimentAnalysis" class="details">
+            <strong>What is it?</strong> Analyzes text to determine its sentiment (positive, negative, neutral).<br>
+            <strong>Why use it?</strong> Helpful for analyzing social media, customer reviews, and news.<br>
+            <strong>How does it work?</strong> Uses NLP techniques like TF-IDF, LSTM, or transformers.
+        </div>
+
+        <div class="project" onclick="toggleDetails('spamDetection')">Spam Email Detection</div>
+        <div id="spamDetection" class="details">
+            <strong>What is it?</strong> Detects spam emails using machine learning.<br>
+            <strong>Why use it?</strong> Prevents phishing attacks and reduces email clutter.<br>
+            <strong>How does it work?</strong> Uses Naïve Bayes, SVM, or deep learning for classification.
+        </div>
+
+        <div class="project" onclick="toggleDetails('customerChurn')">Customer Churn Prediction</div>
+        <div id="customerChurn" class="details">
+            <strong>What is it?</strong> Predicts which customers are likely to leave a service.<br>
+            <strong>Why use it?</strong> Helps businesses retain customers by targeting at-risk users.<br>
+            <strong>How does it work?</strong> Uses classification models like decision trees, logistic regression.
+        </div>
+
+        <div class="project" onclick="toggleDetails('salesForecasting')">Sales Forecasting</div>
+        <div id="salesForecasting" class="details">
+            <strong>What is it?</strong> Predicts future sales using historical data.<br>
+            <strong>Why use it?</strong> Helps businesses optimize inventory and marketing strategies.<br>
+            <strong>How does it work?</strong> Uses time series analysis, ARIMA, LSTM models.
+        </div>
+
+        <div class="project" onclick="toggleDetails('stockPrediction')">Stock Price Prediction</div>
+        <div id="stockPrediction" class="details">
+            <strong>What is it?</strong> Attempts to predict stock prices using AI.<br>
+            <strong>Why use it?</strong> Helps in financial analysis (but has high risks).<br>
+            <strong>How does it work?</strong> Uses LSTM, Reinforcement Learning, and moving averages.
+        </div>
+
+        <div class="project" onclick="toggleDetails('movieRecSys')">Movie Recommendation System</div>
+        <div id="movieRecSys" class="details">
+            <strong>What is it?</strong> Suggests movies based on user preferences.<br>
+            <strong>Why use it?</strong> Used in streaming services to improve user experience.<br>
+            <strong>How does it work?</strong> Uses collaborative filtering, content-based filtering.
+        </div>
+
+        <div class="project" onclick="toggleDetails('musicGenre')">Music Genre Classification</div>
+        <div id="musicGenre" class="details">
+            <strong>What is it?</strong> Classifies music into different genres.<br>
+            <strong>Why use it?</strong> Helps in music recommendation and organization.<br>
+            <strong>How does it work?</strong> Uses spectrogram analysis, CNNs, and RNNs.
+        </div>
+
+        <div class="project" onclick="toggleDetails('anomalyDetection')">Anomaly Detection</div>
+        <div id="anomalyDetection" class="details">
+            <strong>What is it?</strong> Identifies unusual patterns in data.<br>
+            <strong>Why use it?</strong> Used in fraud detection, cybersecurity, and system monitoring.<br>
+            <strong>How does it work?</strong> Uses statistical methods, machine learning models.
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleProjects(id) {
+        var projectList = document.getElementById(id);
+        projectList.style.display = projectList.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleDetails(id) {
+        var details = document.getElementById(id);
+        details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>

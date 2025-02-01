@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .category {
+            padding: 12px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            text-align: center;
+        }
+        .projects {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .project {
+            background: #e3e3e3;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .details {
+            display: none;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            margin-top: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Unique Category Colors */
+        .communicationSystems { background: #007BFF; }
+        .embeddedSystems { background: #28A745; }
+        .signalProcessing { background: #FFC107; }
+        .vlsiCircuitDesign { background: #DC3545; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Electronics and Communication Engineering Projects (ECE)</h2>
+
+    <!-- Communication Systems -->
+    <div class="category communicationSystems" onclick="toggleProjects('communicationSystems')">Communication Systems</div>
+    <div id="communicationSystems" class="projects">
+        <div class="project" onclick="toggleDetails('sdrImplementation')">Software-Defined Radio (SDR) Implementation</div>
+        <div id="sdrImplementation" class="details">
+            <strong>What is it?</strong> Implement basic communication protocols (AM/FM, digital modulation) using SDR platforms.<br>
+            <strong>Why use it?</strong> It allows for flexible and reconfigurable communication systems.<br>
+            <strong>How does it work?</strong> Use platforms like GNU Radio or MATLAB to simulate and implement radio communication systems.
+        </div>
+
+        <div class="project" onclick="toggleDetails('wsnDevelopment')">Wireless Sensor Network (WSN) Development</div>
+        <div id="wsnDevelopment" class="details">
+            <strong>What is it?</strong> Design and deploy a WSN for environmental monitoring or other applications.<br>
+            <strong>Why use it?</strong> Helps monitor and collect data from remote locations.<br>
+            <strong>How does it work?</strong> Uses sensors, wireless communication protocols (e.g., ZigBee), and microcontrollers to collect and transmit data.
+        </div>
+
+        <div class="project" onclick="toggleDetails('opticalFiber')">Optical Fiber Communication System Simulation</div>
+        <div id="opticalFiber" class="details">
+            <strong>What is it?</strong> Simulate and analyze optical fiber communication links using software tools.<br>
+            <strong>Why use it?</strong> Optical fiber systems are essential for high-speed data transmission.<br>
+            <strong>How does it work?</strong> Use simulation software like OptiSystem to model the transmission of signals through optical fibers.
+        </div>
+
+        <div class="project" onclick="toggleDetails('satelliteComm')">Satellite Communication System Design</div>
+        <div id="satelliteComm" class="details">
+            <strong>What is it?</strong> Design a basic satellite communication link, considering link budget and other parameters.<br>
+            <strong>Why use it?</strong> Satellite communications are crucial for global connectivity.<br>
+            <strong>How does it work?</strong> Model the communication link using MATLAB or other simulation tools to calculate the signal strength, bandwidth, and noise.
+        </div>
+    </div>
+
+    <!-- Embedded Systems and Microcontrollers -->
+    <div class="category embeddedSystems" onclick="toggleProjects('embeddedSystems')">Embedded Systems and Microcontrollers</div>
+    <div id="embeddedSystems" class="projects">
+        <div class="project" onclick="toggleDetails('homeAutomation')">Home Automation System</div>
+        <div id="homeAutomation" class="details">
+            <strong>What is it?</strong> Develop a system for controlling home appliances using a microcontroller and sensors.<br>
+            <strong>Why use it?</strong> It provides comfort and energy efficiency in smart homes.<br>
+            <strong>How does it work?</strong> Use microcontrollers like Arduino or Raspberry Pi to control devices such as lights, fans, and security systems based on sensor inputs.
+        </div>
+
+        <div class="project" onclick="toggleDetails('smartIrrigation')">Smart Irrigation System</div>
+        <div id="smartIrrigation" class="details">
+            <strong>What is it?</strong> Design an automated irrigation system based on soil moisture and weather conditions.<br>
+            <strong>Why use it?</strong> It helps conserve water and optimize irrigation schedules.<br>
+            <strong>How does it work?</strong> Uses sensors for soil moisture and weather data, and a microcontroller to control water flow based on real-time conditions.
+        </div>
+    </div>
+
+    <!-- Signal Processing and Image Processing -->
+    <div class="category signalProcessing" onclick="toggleProjects('signalProcessing')">Signal Processing and Image Processing</div>
+    <div id="signalProcessing" class="projects">
+        <div class="project" onclick="toggleDetails('audioSignal')">Audio Signal Processing</div>
+        <div id="audioSignal" class="details">
+            <strong>What is it?</strong> Implement audio effects (echo, reverb) or noise reduction techniques using signal processing algorithms.<br>
+            <strong>Why use it?</strong> It enhances audio quality for communication or entertainment purposes.<br>
+            <strong>How does it work?</strong> Uses algorithms in MATLAB or Python to process audio signals in real-time.
+        </div>
+
+        <div class="project" onclick="toggleDetails('imageCompression')">Image Compression</div>
+        <div id="imageCompression" class="details">
+            <strong>What is it?</strong> Implement image compression algorithms (JPEG, PNG) using MATLAB or Python.<br>
+            <strong>Why use it?</strong> It reduces image file size while maintaining quality.<br>
+            <strong>How does it work?</strong> Use techniques like DCT or Huffman coding to compress image data.
+        </div>
+    </div>
+
+    <!-- VLSI and Circuit Design -->
+    <div class="category vlsiCircuitDesign" onclick="toggleProjects('vlsiCircuitDesign')">VLSI and Circuit Design</div>
+    <div id="vlsiCircuitDesign" class="projects">
+        <div class="project" onclick="toggleDetails('combinationalCircuit')">Combinational Circuit Design</div>
+        <div id="combinationalCircuit" class="details">
+            <strong>What is it?</strong> Design and simulate combinational logic circuits using Verilog or VHDL.<br>
+            <strong>Why use it?</strong> Combinational circuits are fundamental to digital systems.<br>
+            <strong>How does it work?</strong> Write Verilog or VHDL code to implement circuits like adders, multiplexers, and decoders.
+        </div>
+
+        <div class="project" onclick="toggleDetails('analogCircuit')">Analog Circuit Design</div>
+        <div id="analogCircuit" class="details">
+            <strong>What is it?</strong> Design and simulate basic analog circuits (amplifiers, filters) using SPICE.<br>
+            <strong>Why use it?</strong> Analog circuits are essential for signal processing and amplification.<br>
+            <strong>How does it work?</strong> Use SPICE simulation tools to model and test circuits before physical implementation.
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleProjects(id) {
+        var projectList = document.getElementById(id);
+        if (projectList.style.display === "block") {
+            projectList.style.display = "none";
+        } else {
+            projectList.style.display = "block";
+        }
+    }
+
+    function toggleDetails(id) {
+        var details = document.getElementById(id);
+        if (details.style.display === "block") {
+            details.style.display = "none";
+        } else {
+            details.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
